@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    platform: linux/amd64
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: Ippei123
+    ports:
+      - "33307:3306"
+
+  web:
+    build: .
+    volumes:
+      - .:/live_management
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      APP_DATABASE: db
