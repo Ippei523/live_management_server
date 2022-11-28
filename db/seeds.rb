@@ -13,5 +13,5 @@ youtube_participant = [
 ]
 
 youtube_participant.each do |yt_name, trainer_name, participant_count, memo|
-  YoutubeParticipantInfos.create(youtube_name: yt_name, traier_name: trainer_name, participant_count: participant_count, memo: memo)
+  YoutubeParticipantInfo.create(youtube_name: yt_name, trainer_name: trainer_name, participant_count: participant_count, memo: memo)
 end

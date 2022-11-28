@@ -1,19 +1,19 @@
 class YoutubeParticipantInfosController < ApplicationController
   before_action :set_youtube_participant_info, only: %i[ show update destroy ]
 
-  # GET /youtube_participant_info
+  # GET /youtube_participant_infos
   def index
-    @youtube_participant_info = YoutubeParticipantInfo.all
+    @youtube_participant_infos = YoutubeParticipantInfo.all
 
-    render json: @youtube_participant_info
+    render json: @youtube_participant_infos
   end
 
-  # GET /youtube_participant_info/1
+  # GET /youtube_participant_infos/1
   def show
     render json: @youtube_participant_info
   end
 
-  # POST /youtube_participant_info
+  # POST /youtube_participant_infos
   def create
     @youtube_participant_info = YoutubeParticipantInfo.new(youtube_participant_info_params)
 
@@ -24,7 +24,7 @@ class YoutubeParticipantInfosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /youtube_participant_info/1
+  # PATCH/PUT /youtube_participant_infos/1
   def update
     if @youtube_participant_info.update(youtube_participant_info_params)
       render json: @youtube_participant_info
@@ -33,7 +33,7 @@ class YoutubeParticipantInfosController < ApplicationController
     end
   end
 
-  # DELETE /youtube_participant_info/1
+  # DELETE /youtube_participant_infos/1
   def destroy
     @youtube_participant_info.destroy
   end
