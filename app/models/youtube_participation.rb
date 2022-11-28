@@ -1,0 +1,2 @@
+class YoutubeParticipation < ApplicationRecord
+end
